@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box sizing - that  controls how the width and height of an element should be calculates
+                default - content-box
+                border-box: width=100
+    */
+}
+#div{
+    border: 1px solid black;
+    margin: 10px;
+}
+#div2{
+    border: 4px solid black;
+    height: 40px;
+    width: 100px;
+    padding: 2px;
+}
+
+.parent{
+    background-color: blue;
+}
+.child{
+    border: 1px solid black;
+}
+/* descendent selector- both style boyh direct and indirect chid */
+/* .parent .child{
+    color: aqua;
+} */
+
+/*  child selector - used to select only direct child */
+.parent>.child{
+    color: yellow;
+}
+/* adjacent sibling selector-- select only immediate sibling/addjacent sibling */
+.d1 + p{
+    background-color: red;
+}
+/* general sibling --- selects all sibling/adjacent elements */
+.d1 ~ p{
+    background-color: blue;
+}
+
+input[type="text"]{
+    background-color: blue;
+}
