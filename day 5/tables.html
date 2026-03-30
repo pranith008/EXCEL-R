@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        .collapse,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .uncollapse,th,td{
+            border:1px solid black;
+            border-collapse: separate;
+        }
+    </style>
+</head>
+<body>
+    <table class="collapse" cellpadding="10">
+        <caption><i>A test table with merged cells</i></caption>
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2">Average</th>
+                <th rowspan="2">Red eyes</th>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <th>weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Males</th>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <th>Females</th>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+
+
+
+    <table class="uncollapse">
+        <caption><h1>Table with Uncollapsed Border</h1></caption>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Job Title</th>
+                <th>Email Adress</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anna Fitzgerald</td>
+                <td>Staff Writer</td>
+                <td>example@company.com</td>
+            </tr>
+            <tr>
+                <td>John Smith</td>
+                <td>Marketing Manager</td>
+                <td>example2@company.com</td>
+            </tr>
+            <tr>
+                <td>Zendaya Grace</td>
+                <td>CEO</td>
+                <td>example3@company.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+    <br><br><br>
+
+
+    <table class="uncollapse">
+        <thead>
+            <tr>
+                <th rowspan="2">Heading</th>
+                <th colspan="1">Students</th>
+                <th colspan="3">Details</th>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Roll Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">Students list</td>
+                <td>1</td>
+                <td>Victor</td>
+                <td>Computer science</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Williams</td>
+                <td>Electronics</td>
+                <td>23456</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Harry</td>
+                <td>Electrical</td>
+                <td>34567</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Rick</td>
+                <td>Civil</td>
+                <td>45678</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <hr>
+
+    <br><br><br>
+    <table class="collapse">
+        <thead>
+            <tr>
+                <th colspan="6">Time Table</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="6">Hours</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+                <th colspan="5">Lunch</th>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+                <th rowspan="2" colspan="2">Project</th>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <hr>
+    <br><br><br>
+    <table class="uncollapse">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Extended</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hard disk</td>
+                <td>1</td>
+                <td>500$</td>
+                <td>400$</td>
+            </tr>
+            <tr>
+                <td>Cd Drive</td>
+                <td>1</td>
+                <td>200$</td>
+                <td>500$</td>
+            </tr>
+            <tr>
+                <td>Cds</td>
+                <td>10</td>
+                <td>20$</td>
+                <td>50$</td>
+            </tr>
+            <tr>
+                <th colspan="3">Total Amount</th>
+                <th>950$</th>
+            </tr>
+        </tbody>
+
+    </table>
+    <hr>
+    <br><br><br>
+    <table class="uncollapse">
+        <thead>
+            <tr>
+                <th rowspan="3">Day</th>
+                <th colspan="3">Seminar</th>
+            </tr>
+            <tr>
+                <th colspan="2">Schedule</th>
+                <th rowspan="2">Topic</th>
+            </tr>
+            <tr>
+                <th>Begin</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2">8:00</td>
+                <td rowspan="2">5:00</td>
+                <td>Introduction to XML</td>
+            </tr>
+            <tr>
+                <td>Validity DtD and Relax NG</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Tuesday</td>
+                <td>8:00</td>
+                <td>11:00</td>
+                <td>Xpath</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td>2:00</td>
+                <td rowspan="2">XSL Transformation</td>
+            </tr>
+            <tr>
+                <td>2:00</td>
+                <td>5:00</td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+</body>
+</html>

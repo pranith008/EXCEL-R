@@ -25,9 +25,9 @@
     border: 1px solid black;
 }
 /* descendent selector- both style boyh direct and indirect chid */
-/* .parent .child{
+.parent .child{
     color: aqua;
-} */
+} 
 
 /*  child selector - used to select only direct child */
 .parent>.child{

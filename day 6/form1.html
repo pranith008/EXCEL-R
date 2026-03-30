@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- <form action="https://httpbin.org/post" method="post"> -->
+    <form action="" method="get">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" placeholder="Enter your age">
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+    </form>
+</body>
+</html>
+
+<!-- 
+    action: where the data is sent(backend)
+    method: how data is sent to backend
+        1. get---- we can display the data in the format of key and value pair
+        2. post---- we can hide the data in url
+    name: it is used to specify keyvalue 
+
+
+url/action ------------method--get ----- Query string 
+    url/action----------method--post
+ -->

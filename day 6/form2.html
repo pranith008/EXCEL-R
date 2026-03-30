@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2</title>
+</head>
+<body>
+    <form action="" method="" target="">
+
+        <fieldset>
+            <legend>Basic Info:</legend>
+            <label for="photo">Profile Photo</label>
+            <input type="file" name="photo" id="photo" accept="image/*"><br><br>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter your name"><br><br>
+            <label for="fathername">Father Name</label>
+            <input type="text" name="fathername" id="fathername" placeholder="Enter your father name"><br><br>
+             <label for="mothername">Mother Name</label>
+            <input type="text" name="mothername" id="mothername" placeholder="Enter your mother name"><br><br>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob"><br><br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" placeholder="Enter your age" min="18" max="25"><br><br>
+            <label for="gender">Gender :</label>
+            <input type="radio" name="gender" id="gender" value="male">Male
+            <input type="radio" name="gender" id="gender" value="female">Female
+            <input type="radio" name="gender" id="gender" value="others">Others <br><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Contact Info:</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone"><br><br>
+             <label for="linkedin">Linkedin url:</label>
+            <input type="url" name="linkedin" id="linkedin"><br><br>
+             <label for="address">Address</label>
+            <textarea name="address" id="address" rows="5" cols="20"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Hobbies & Favourites</legend>
+            <label for="lang"> Favourite Languages</label>
+            <input type="checkbox" name="lang" id="lang" value="java">Java
+            <input type="checkbox" name="lang" id="lang" value="python">Python
+            <input type="checkbox" name="lang" id="lang" value="c">C
+            <input type="checkbox" name="lang" id="lang" value="sql">sql
+            <br><br>
+            <label for="food">Food</label>
+            <select name="food" id="food">
+            <option value="">---select food item</option>
+            <optgroup label="Tiffins">
+                <option value="idly">Idly</option>
+                <option value="Dosa">Dosa</option>
+                <option value="Puri">Puri</option>
+            </optgroup>
+            <optgroup label="non-veg items">
+                <option value="chicken biryani">Chicken Biryani</option>
+                <option value="mutton biryani">Mutton Biryani</option>
+                
+                
+            </optgroup>
+            </select>
+            <br><br>
+            <label for="pets">Pets</label>
+            <input list="pets">
+            <datalist id="pets">
+                <option value="dog"></option>
+                <option value="cat"></option>
+                <option value="cow"></option>
+
+            </datalist>
+        </fieldset>
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
+
+<!-- input type:text
+                password
+                number
+                email
+                tel
+                url
+                search
+                date
+                time
+                datetime
+                datetime-local
+                file
+                radio
+                checkbox
+                submit
+                reset
+                button
+                hidden
+                color
+                range
+    
+    select --- it won't support custom input
+
+    datalist --- it will support custom support
+                --input+suggestion+dropdown
+
+
+
+
+
+-->
