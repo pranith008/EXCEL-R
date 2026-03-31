@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* for static top, bottom,left , right won't applicable
+   in htmldocument every element is static by default
+*/
+#_static{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 0, 0);
+    top: 20px;
+    left: 40px;
+    /* position static */
+}
+
+ /* for relative top, bottom,left , right will applicable 
+   we can move elements from its original position
+*/
+#_relative{
+     width: 400px;
+    height: 400px;
+    background-color: greenyellow;
+    top: 50px;
+    left: 400px;
+    position: relative;
+
+}
+
+.relative{
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+.box1{
+    background-color: red;
+    top: 100px;
+    left: 40px;
+    z-index: 1;
+}
+
+.box2{
+    background-color: blue;
+    left: 100px;
+    z-index: 19;
+
+}
+
+.box3{
+    background-color:brown ;
+    left: 160px;
+    bottom: 80px;
+    z-index: 10;
+}
+
+#_fixed{
+    background-color: pink;
+    height: 40px;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/* it is a combination of relative + fixed
+    it acts like normally until a point(scroll), then behaves like fixed
+*/
+#_sticky{
+    background-color: black;
+    height: 40px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    
+}
+#parent{
+    background-color: grey;
+    height: 400px;
+    width: 800px;
+    border: 1px solid black;
+    position: relative;
+ 
+}
+#_absolute{
+     background-color: tomato;
+    height: 100px;
+    width: 200px;
+    border-radius: 50% ;
+    text-align: center;
+    position:absolute ;
+    right: 0;
+    bottom: 0;
+}
