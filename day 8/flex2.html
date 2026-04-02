@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 2</title>
+    <style>
+        .parent{
+            border: 1px solid black;
+            height:1000px;
+            display: flex;
+            /* justify-content: flex-start; */
+            /* flex-wrap: wrap; 
+            align-content: space-between;
+            gap: 10px; */
+
+        }
+        .item{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            font-size: 40px;
+        }
+        .one{
+            background-color: red;
+        }
+        .two{
+            background-color: aqua;
+        }
+        .three{
+            background-color: yellow;
+        }
+        .four{
+            background-color: palevioletred;
+        }
+        .five{
+            background-color: blue;
+        }
+        .six{
+            background-color: blueviolet;
+        }
+        .seven{
+            background-color: orange;
+        }
+        .eight{
+            background-color: green;
+            /* flex-shrink: 5;
+            flex-grow: 5;  */
+        }
+    </style>
+</head>
+<body>
+        <div class="parent">
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item three">3</div>
+        <div class="item four">4</div>
+        <div class="item five">5</div>
+        <div class="item six">6</div>
+        <div class="item seven">7</div>
+        <div class="item eight">8</div>
+        <div class="item four">9</div>
+        <div class="item three">10</div>
+        <div class="item two">11</div>
+        <div class="item one">12</div>
+    </div>
+</body>
+</html>
