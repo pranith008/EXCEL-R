@@ -1,0 +1,19 @@
+JavaScript :
+------------
+        - is a scripting language
+        - used to create dynamic(behaviour/functionalities) and interactive webpages/application
+        - It is used as client(UI) and server side (Node JS) language
+        - It is a synchronous language
+        - It is a case sensitive
+
+JavaScript is used in :
+----------------------
+                    React Js -- Library
+                    Node js -- server
+                    Angular js -- Frameworks
+
+We can add Js in our webpage :
+------------------------------
+                            1. Inline Js
+                            2. Internal Js
+                            3. External Js
