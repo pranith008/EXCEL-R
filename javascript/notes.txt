@@ -1,0 +1,179 @@
+JavaScript :
+------------
+        - is a scripting language
+        - used to create dynamic(behaviour/functionalities) and interactive webpages/application
+        - It is used as client(UI) and server side (Node JS) language
+        - It is a synchronous language
+        - It is a case sensitive
+
+JavaScript is used in :
+----------------------
+                    React Js -- Library
+                    Node js -- server
+                    Angular js -- Frameworks
+
+We can add Js in our webpage :
+------------------------------
+                            1. Inline Js
+                            2. Internal Js
+                            3. External Js
+
+Tokens: building blocks of a program
+                1.Keywords
+                2.Identifiers
+                3.values/data/literals
+                4.variables
+                5.operators
+                6.separators
+                
+1.Keywords: keywords are the prereserved words
+
+2.Identifiers : names providing to the variables,objects,functions,list etc.
+
+Rules:
+    1.Identifiers do not start with number
+    2.identifiers do not start with special characters except _ (underscore) and $(dollor)
+    3.identifiers don't have spaces
+    4.identifiers do not start with keywords
+
+3.value/data/literals:
+    number: 10,-20,47.89
+    String : group of characters(aasingn in single or double quotes)
+    boolean: true/false
+    null
+    undefined
+    array
+    objects(key value pairs)
+
+    data is divided into two data types:
+        1.primitive data types -- storing single value
+            number
+            strings
+            boolean
+            null
+            undefined
+            symbol
+            bigint
+        
+        2.non-primitive data types -- multiple data
+            objects
+            arrays
+            map
+            set 
+
+Note: typeof operator helps to know the datatype /literal type
+
+
+
+
+
+variable : It is a container used to store a data or value
+Declaration of variable:(providing names) :
+                                        1.var 
+                                        2.let
+                                        3.const
+Assigning/initializing the variable :
+let a;
+a=10;
+
+re-declaring the variable : 
+        let a;
+        let a;
+
+re-assigningb the variable :
+        let a;
+        a=10;
+        a='xyz';
+
+hoisting the variable : it is a behaviour where variable and function declarations are moved to top of the scope
+before execution
+
+let a;
+console.log(a);
+a=10;
+
+----------------------------------------------------------------------------------------------
+                    var                     let                     const
+---------------------------------------------------------------------------------------------
+scope            function                  block                    block
+
+re-declaration    yes                        no                      no
+
+re-assign         yes                      yes                       no
+
+declaring         undefined                undefined                 error
+without assign
+(assigning)      optional                  optional                 mandatory
+
+hoisting           undefined (yes)       reference error(yes)      reference error(yes)
+----------------------------------------------------------------------------------------------
+Operators :
+-----------
+            It is a symbol used to perform operations on values(operands)
+----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+conditional statements:
+-----------------------
+                used to make decisions
+
+Looping Statements :
+---------------------
+                it is used to execute a block of code multiple times until the condition satisfy
+
+                for Loop
+                while Loop
+                do while Loop
+
+Functions :
+-----------
+            -it is a block of code
+            -creating a function once and use/calling function many times
+            -avoid code repetition
+            -improve readability
+            -easy to maintain and debug
+            -code reuseability
+Types:
+------
+        Base on arguments/parameters :
+                                    1.Argumented / parameterized function
+                                        function functionname(arg1,arg2){
+
+                                        }
+                                    -to print dynamic output based on inputs
+                                    2.No argumented/non-parameterized function
+                                        function functionname(){
+
+                                        }
+                                    - to execute the same code everytime
+
+1. Function declaration
+                - syntax : function functionname(){
+                                code
+                            }
+        -Function Calling
+                - syntax : functionname();
+
+2. Function Expression:
+----------------------
+        syntax :
+        let variable/functionreference=function(){
+
+        }
+        functionreference()
+
+3. Arrow Function:
+------------------
+    syntax:
+    let ref()=>{
+
+    }
+    ref();
+
+4. Anonymous function:
+----------------------
+        a function without name, arrow function and function expresssion will act like an anonymous function
+
+        syntax:
+        setTimeout(()=>{
+
+        },timeout in sec);

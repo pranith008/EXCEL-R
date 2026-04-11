@@ -254,8 +254,3 @@ body {
     text-align: center;
     font-size: 13px;
 }
-@media (max-width: 75em) {
-    html {
-        font-size: 60%;
-    }
-}

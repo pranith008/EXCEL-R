@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}                       
 body{
     height: 100vh;
     border: 1px solid black;
@@ -68,9 +68,9 @@ a:hover{
         justify-content: space-between;
     }
     .grid-container{
-     grid-template-areas: "section1   section2"
+     grid-template-areas: "section1   section1"
                           "main       main"
-                          "main       main"
+                          "section2   section2"
                           "footer     footer";   
     }
 }

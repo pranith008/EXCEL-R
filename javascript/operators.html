@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script>
+        let a=10;
+        let b=20;
+        // arithmetic operators
+        console.log(a+b);// addition
+        console.log(a-b);//subtraction
+        console.log(a*b);//multiplication
+        console.log(a/b);//division
+        console.log(a%b);//remainder
+        console.log(a**3);//power
+        //concatenation
+
+        let name='pranith';
+        console.log("hello"+name);
+        console.log(`hello ${name}`);
+
+        //unary operators
+
+        let p=10;
+        let q=5;
+
+        let total= ++p + q++ - ++q
+        console.log(p);
+        console.log(q);
+        console.log(total);
+        
+        
+        
+        
+        
+        
+
+        // assignment operators or compound assignment operator
+        let x=5;//equal to
+        console.log(x);
+        
+           // x=a+x;
+           x+=a;//x=a+x
+        console.log(x);
+           x-=a;//x=X-a
+        console.log(x);
+            x*=a;
+            x/=a;
+            x%=a;
+            x**=a;
+
+
+        // comparision operators 0r relational
+        console.log(a==b);//equal to
+        console.log(a!=b);//not equal to
+        console.log(a>b);//greater than
+        console.log(a<b);//less than
+        console.log(a>=b);//greater than equals to
+        console.log(a<=b);//less than equals to
+
+        console.log(10=='10');//number == string (true) //ignores datatype
+        console.log(10==='10');//number=== string (false) // checks with datatype and value
+
+
+        // logical operator on boolean and gives (return) boolean
+        //logical AND(&&)
+        console.log(true&&true);//true
+        console.log(true&&false);//false
+        console.log(false&&true);//false
+        console.log(false&&false);//false
+
+        // logical OR(||)
+
+        console.log(true||true);//true
+        console.log(true||false);//true
+        console.log(false||true);//true
+        console.log(false||false);//false
+
+        //logical not(!)
+        console.log(!false);//true
+        console.log(!true);//false
+
+    // Ternary operators or conditional operators
+        let balance=1000;
+        let withdraw=1500;
+
+        // syntax -- operand1 ? operand2:operand 3
+                    // (condition)? true : false
+
+        let result=(withdraw<=balance)?"you can withdraw":"insufficient balance"
+        console.log(result);
+
+        let age=21;
+        let gender='M';
+        let res=(age>=18&&(gender=='M'|| gender=='F'))? "you are elgible":"you are not eligible"
+        console.log(res);
+        
+
+        
+
+        
+
+
+        
+
+        
+        
+        
+        
+        
+        
+
+           
+        
+
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
