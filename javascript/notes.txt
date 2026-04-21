@@ -177,3 +177,424 @@ Types:
         setTimeout(()=>{
 
         },timeout in sec);
+
+5. Call back function:
+-----------------------
+        a function is passing through arguments in another function
+
+        syntax:
+        function f1(){
+
+        }
+        function f2(){
+
+        }
+        function mainfunction(var1,var2,fun1,fun2){
+
+        }
+        mainfunction(10,20,f1,f2);
+
+Call Back hell / Pyramid of doom :
+----------------------------------
+        This is a situation where we have multiple call back inside a callback (nested function)
+        -hard to maintain / modify
+        -hard to read 
+        -hard to debug
+
+        use:when we dealing with time in synchronous code then it behaves like asynchronous so we won't get expected output
+            to avoid this senario we can use call back hell and promises
+
+promises:
+---------
+    It is an object ,used to handle asynchronous operations
+
+    states:
+    1.Pending -- starting /initial state 
+    2.fulfilles -- if operation is success
+    3.Rejected -- if operation is failed
+
+promise can be handle in two ways
+
+1. then and catch
+    .then()-- a function which is used to handle success of a promise
+    .catch()--a function which is used to deal with failure of a promise
+    .finally()--a function,which executes even if we get success or failure
+
+2. async and await
+    async is a function which hold a promise
+    await is a keyword used to wait for a promise to resolve
+    await is used inside async function(mandatory) 
+
+Promise.race():
+--------------
+        -it collects multiple promises in array format
+        -it returns single result 
+        -First win,first value1-it won't wait for all promises to complete
+
+Promise.all():
+--------------
+        -it collects multiple promise in array format
+        -it result promises in array format,when all promises are in resolve state
+        -if any promise is failed it execute catch block as errors
+
+Promise.allSettled():
+---------------------
+        -it collect multiple promises in array format
+        -it result promises in array format,in the form of object which consist of state and value
+
+
+---------------------------------------------------------------------------------------------------------------
+Object:
+-------
+                -real word entity , which is a combination of properties/data and function/actions/method
+                -data is stored in the form of key & value pair 
+                -object is enclosed in {}
+                    syntax:
+                    {
+                        "key1":value1;
+                        "key2":value2;
+                    }
+
+Note: In Js every object consist of prototype
+
+creation of objects:
+                1.Constructor function
+                2.Class and Constructor
+                3.Object literal
+                4.Object.create()
+6. Constructor function:
+        used to create Object        
+        syntax:
+        function functionname(arg1,arg2,arg3...){
+            this.arg1=arg1;
+            this.arg2=arg2;
+        }
+
+        new functionname(val1,val2,val3)
+
+        note:indicates the current object
+
+2. class and constructor:
+            -it is a template for creating objects
+
+        syntax:
+        class classname{
+            constructor(arg1,arg2){
+                this.arg1=arg1;
+                this.arg2=arg2;
+            }
+        }
+
+3. Object literal:(static way)
+        syntax:
+        let varname={
+            k1:p1,
+            k2:p2,
+        }
+
+4.Object.create():
+syntax:
+const obj={
+    'key1'='val1'
+}
+let newObj=Object.create(obj);
+    -it is a way of creating a new objects base on existing object (Inheritance)
+    -thus,it can share the properties and functions of an existing object --- prototype
+
+prototype:
+---------
+    -it is a property of an object
+    -it allows other object to inherit/sharing properties and functions
+    -it helps to add new properties and functions into object
+    -it helps to create a prototype chain between objects
+
+prototype chaining:
+------------------
+    -it is a chain of objects
+    it can acheiv using Object.create()
+
+JSON:(JavaScript Object notation)
+=====
+     - it is a plain text, lightweight data interchange text
+     - used to store data(noSQL) and exchange data (client<--->server)
+
+
+                  JS Object                       JSON Object
+ -------------------------------------------------------------------------------------
+syntax           flexible and dynamic             fixed/strict and static
+
+keyQoutes        optional                          mandatory     
+
+JSON RULES:
+----------
+       - key must be indicated with double Qoutes
+       - keys must be unique
+       - Json Object need to enclosed in {} 
+       - Json array need to enclosed in []
+
+Json Types:
+----------
+     1.Json Object
+     2.Json Array
+     3.Nested Json 
+
+accessing the values :
+--------------------
+         - can access by using .notaion or [] notation
+
+re-assign/re-intilize the values:
+---------------------
+        obj.key=newValue  or obj['key']=newValue
+
+delete a value:
+---------------
+         delete obj.key   or delete obj['key]
+
+merge of objects
+-----------------
+          -merging/combining the objects using ...(spread operator ) or Object.assign()
+          Note: while merging keys must be uniques , if same key is present in both the objects 
+                it prefers second object data
+adding the key-value pair
+------------------------
+            - use .notation or [] notation or ... (spread operator) or Object.assign
+
+Destructing the Object:
+-----------------------
+        -it is a super way for accessing , adding  or assigning values, renaming keys
+        -it makes code cleaner,resuable,simple
+
+syntax:
+
+const user={
+    "name":"raj",
+    "email":"raj@gmail.com"
+}
+console.log(user.name);
+
+
+let {name,email}=user;
+console.log(name);
+
+
+
+Object methods:
+--------------
+Object.keys()---returns keys in array format
+Object.values()--returns values in array format
+Object.entries()--returns key-value pairs in array format
+
+Iterating the object key-values:
+------------------------------
+      - for in loop
+          syntax:
+                for(let key in Obj){
+                  //logic
+                }
+      - forEach function
+               obj.forEach(
+                (key)=>{
+                    // logic 
+                }
+               )
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+7.IIFE(immediately invoked function expression)
+-------
+    -calling a function immediately after creating/declaring
+    syntax:
+    (
+        function(){
+
+        }
+    )();
+
+8. Generator Function:
+----------------------
+    - a function is used to generate values or create iterators/generators
+
+    syntax:
+        function* functionname(){
+            yield value1;
+            ......
+            yield valueN;
+        }
+    
+    -to access values from generators
+    let generator=functionname();
+    generator.next()---> returns data and value in object format
+
+9. Higher Order Function:
+-------------------------
+    -It is a function,that allows another function as arguments
+    and returns amother function as return statements
+
+    suntax:
+        function mainfun(arg1,atg2,fun){
+            return fun(arg1,arg2)
+        }
+        
+-----------------------------------------------------------------------------------------------------------------
+Array:
+-------
+    -Array is a collection of elements
+    -it is used to store multiple values in single variable/reference
+    -Array can accept same data type or different data type in js
+    -Array is mutable
+    -Array is enclosed in []
+    -Array will store values in index position
+
+    syntax: let arr=[10,20,30]
+                      0  1  2
+
+Array creation:
+---------------
+            1.Array literal
+            2.Array constructor and new keyword
+            3.Array.from
+            4.Array.of
+            let arr=[10,20,30];
+
+            console.log(arr);
+            console.log(arr,length);//size or length
+            console.log(arr[0]);
+            console.log(arr[-3]);
+
+            let arr2=[10,"mango",true,{'name':"raj"}];
+            console.log(arr2);
+
+            // using new keyword
+            let arr3=new Array(10,20,30,40);
+            console.log(arr3);
+            let arr4=new Array(4);//[_,_,_] empty
+            console.log(arr4);
+
+            // from function
+            let value="hello world!";
+            let arr5=Array.from(value);
+            console.log(arr5);
+
+            let arr6=Array.of(10,20,30,40);
+            console.log(arr6);
+            let arr7=Array.of(2);
+            console.log();
+
+    Accessing/Reading a value:
+    --------------------------
+                        -through index position
+                        -through at function
+                        -let arr=[10,20,30];
+                                   0  1  2
+                                  -3 -2 -1
+    Adding a value:
+    --------------
+            -through index position
+            -push(value)---adds element at last position
+            -unshift(value)---adds element to first position
+    Delete a value:
+    ---------------
+            -using delete keyword -- there won't be any change in size,it will make the value as empty
+            -pop()--remove element at last position and returns deleted value
+            -shift()--removes element at first position and returns deleted value
+    
+    updating a value:
+    -----------------
+            -through index position
+            -array functions
+    
+    Iterate an array:
+    -----------------
+                while loop -index
+                do while loop-index
+                for loop-index
+                forEach function-value
+                for in loop - index
+                for of loop - value
+    
+    forEach():
+    ----------
+            -It is a callback function
+            -which will aacept a function,contains 3 arguments
+            -largs-value (mandatory),2arg--index,3arg--arr
+            -it won't return any value
+    syntax:
+        arr.forEach(
+            (value,index,arr)=>{
+
+            }
+        )
+    
+    map():
+    ------
+            -It is a callback function
+            -it helps to process the data (data manipulating/processing)
+            -it returns a new array which is same size as input array
+    syntax:
+        arr.map(
+            (value,index,arr)=>{
+                return _________
+            }
+        )
+
+    filter(): Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data (based on condition)
+            -it returns a new array size will change from input size
+    syntax:
+        arr.filter(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )
+
+    find():Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data and returns first matching result
+            -it returns a single value
+    syntax:
+        arr.find(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )
+    
+    findLast():Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data and returns last matching result
+            -it returns a single value
+    syntax:
+        arr.findLast(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )
+
+    every():Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data and returns boolean result
+            -if all values are satisfying with the condition it returns true or else returns false
+            -it returns a boolean value
+    syntax:
+        arr.every(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )
+
+    some():Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data and returns boolean result
+            -if some of the values are satisfying with the condition it returns true 
+            -if none of the values are satisfying with the condition it returns  false
+            -it returns a boolean value
+    syntax:
+        arr.some(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )

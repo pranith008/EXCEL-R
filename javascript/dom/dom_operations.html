@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation Operation</title>
+</head>
+<body>
+    
+    <div id="container">
+
+        <div id="removed">
+            This is a removed Text
+        </div>
+    </div>
+   
+    <script>
+         let conatiner=document.getElementById('container');
+         let paragraph=document.createElement('p');
+         paragraph.innerHTML='<b>Document Object Model</b>';
+         paragraph.style.color='red';
+         conatiner.append(paragraph)
+         
+         let removed=document.querySelector('#removed');
+         console.log(removed);
+          
+         conatiner.removeChild(removed);
+         
+    </script>
+</body>
+</html>

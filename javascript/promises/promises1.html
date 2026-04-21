@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises 1</title>
+</head>
+<body>
+    <script>
+        // Promise is an object which stores data in key&value pairs
+        function step1(){
+           return new Promise((resolve)=>{
+                setTimeout(()=>{
+                 console.log('glass of water');
+                 resolve();
+                },5000 ); 
+           })  
+        }
+        function step2(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                 console.log('squeeze lemon into water');
+                 resolve();
+                },3000 );
+            })
+        }
+        function step3(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                 console.log('adding sugar,salt.etc');
+                 resolve();
+                },2000 );
+            })    
+        }
+        function step4(){
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                  console.log('stir and drink the lemon juice');
+                  resolve();
+                },6000 );
+            })
+        }
+        // Then and catch
+        step1()
+        .then(()=>step2())
+        .then(()=>step3())
+        .then(()=>step4())
+        .catch((error)=>{
+            console.log(error);
+            
+        })
+
+        
+
+// handling promises using async and await
+async function preparelemonjuice(){
+    await step1();
+    await step2();
+    await step3();
+    await step4();
+    
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise task 2</title>
+</head>
+<body>
+    <script>
+        // let p1=new Promise((resolve)=>{
+        //     setTimeout(()=>
+        //         resolve('promise 1'),2000);
+        // })
+        // let p2=new Promise((resolve)=>{                 
+        //     setTimeout(()=>
+        //         resolve('promise 2'),4000);
+        // })
+        // let p3=new Promise((_,reject)=>{
+        //     setTimeout(()=>
+        //         reject('promise 3'),5000);
+        // })
+
+        // Promise.race([p1,p2,p3])
+        //     .then(
+        //         (result)=>{
+        //             console.log('winner :',result);
+                
+        //         }
+        //     )
+        //     .catch((error)=>{
+        //         console.log('error :',error);
+            
+        //     })
+
+        // chicken biryani
+        // 1.getting ingredients
+        // 2.getting chicken
+        // 3.cutting
+        // 4.cooking
+       
+        let p1=Promise.reject('getting groceries');
+        let p2=Promise.resolve('getting chicken and eggs');
+        let p3=Promise.reject('cuting section');
+        // // all - return an array
+        // Promise.all([p1,p2,p3])
+        // .then((result)=>{
+        //     console.log('result :',result);
+        //     console.log("cooking is started ,,,,,,,,,,");   
+        // })
+        // .catch((error)=>{
+        //     console.log('error :',error);
+            
+        // })
+
+        Promise.allSettled([p1,p2,p3])
+        .then((result)=>{
+            console.log('result :',result);   
+        })
+        .catch((error)=>{
+            console.log('error :',error);
+            
+        })
+
+    </script>
+</body>
+</html>

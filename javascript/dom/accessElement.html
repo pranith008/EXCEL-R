@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Element</title>
+</head>
+<body>
+    
+    <p id="p"></p>
+
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <div class="div1"></div>
+    <div class="div1"></div>
+
+    <p class="p1">First</p>
+    <p class="p1"></p>
+
+    <script>
+       let p= document.getElementById('p');
+       console.log(p);
+       
+       let h1=document.getElementsByTagName('h1');
+       console.log(h1); //htmlcollection
+
+       let div=document.getElementsByClassName('div1');
+       console.log(div);//HMLCollection(2) [div.div1, div.div1]
+
+
+    //    it will find selector(first matching)
+       let classSelector=document.querySelector('.p1');
+       console.log(classSelector);
+    //    It result all matching selectors
+       let classSelectorAll=document.querySelectorAll('.p1');
+       console.log(classSelectorAll); //NodeList(2) [p.p1, p.p1]
+       
+       
+       
+    </script>
+
+</body>
+</html>
