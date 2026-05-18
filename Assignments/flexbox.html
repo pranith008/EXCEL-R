@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box Properties</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, pink, purple);
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            align-content: space-around;
+            gap: 30px;
+            height: 100vh;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .parent {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background: linear-gradient(to bottom right, gold, tomato);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            background: linear-gradient(to bottom right, cyan, blue);
+            color: black;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+        }
+
+        .row-start{
+            flex-direction: row;
+        }
+        .row-center{
+            flex-direction: row;
+            justify-content: center;
+        }
+        .row-end{
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .space-around{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .space-between{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .space-evenly{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .column-center{
+            flex-direction: row;
+            align-items: center;
+        }
+        .column-bottom{
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        .box-center{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .column-end-center{
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+
+        <!-- Row start -->
+        <div class="parent row-start">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- Row - center -->
+        <div class="parent row-center">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!--Row end  -->
+        <div class="parent row-end">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- space around-->
+        <div class="parent space-around">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!--space between-->
+        <div class="parent space-between">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- Space evenly -->
+        <div class="parent space-evenly">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- Row start -->
+        <div class="parent row-start">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- coloum center -->
+        <div class="parent column-center">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- column bottom-->
+        <div class="parent column-bottom">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- box center -->
+        <div class="parent box-center">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+        <!-- column end center -->
+        <div class="parent column-end-center">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+
+</body>
+
+</html>

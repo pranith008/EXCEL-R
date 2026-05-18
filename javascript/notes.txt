@@ -572,6 +572,46 @@ Array creation:
             }
         )
 
+    findIndex():Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data and returns first matching result index position
+            -it returns a single value(index position)
+    syntax:
+        arr.findIndex(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )
+    
+    findLastIndex():Predicate function
+    ----------
+            -It is a callback function
+            -it helps to filter the data and returns last matching result index position
+            -it returns a single value(index position)
+    syntax:
+        arr.findLastIndex(
+            (value,index,arr)=>{
+                return condition;
+            }
+        )
+
+    indexOf():
+    ----------
+            -it helps to find an element in an array
+            -if element is present it returns index position or else it returns -1
+        syntax:
+            arr.indexOf(value,startIndex)
+            -startIndex is optional
+
+    lastIndexOf():
+    --------------
+             -it helps to find an element from last in an array
+            -if element is present it returns index position or else it returns -1
+        syntax:
+            arr.lastIndexOf(value,startIndex)
+            -startIndex is optional
+            
     every():Predicate function
     ----------
             -It is a callback function
@@ -598,3 +638,287 @@ Array creation:
                 return condition;
             }
         )
+
+reduce()
+--------
+        -It is a call back function
+        -It returns a single value by performing operation on each elements of an array
+
+    syntax:
+        arr.reduce(callBack,initialvalue)
+        function callBack(accumulator,currentValue,currentIndex,array){
+            return accumulator
+        }
+
+    accumulator is used to store values/result of operation
+    accumulator and current value are mandatory in callBack
+
+reverse():
+--------
+        -it helps to reverse an array
+        -it will modify input array and returns new reversed array
+    syntax:
+    -------
+        arr.reverse()
+
+splice():
+---------
+        -it helps to delete,modify the data in an array
+        -it won't effect input/original array
+    syntax:
+        arr.splice(startIndexPosition,deleteCount,Updatedvalue);
+        arr.splice(startIndexPosition)---it will start deleting from index position to the end  
+        arr.splice(startIndexPosition,deleteCount)--from index value to the number it will delete elements
+
+slice():
+--------
+        -it helps to extract/provide shallow copy from original array
+        -it won't modify input array
+        -it returns a new array(shallow copy)
+    syntax:
+        arr.slice(startIndex)--from starting index to end it tries to extract
+        arr.slice(startIndex,endIndex)-it extracts from starting to ending index
+
+        Note:startIndex-inclusive
+            endIndex-exclusive
+sort():
+------
+    -it helps to sort undorder Data
+    syntax:
+
+    strArr.sort()--->alphabatical Order
+    arr.sort(compareFunction)---custom ordering 
+        for Ascending Oder:
+                     arr.sort((a,b)=>a-b)
+        for Descending Order:
+                     arr.sort((a,b)=>b-a)
+
+  Condition             result
+
+  a-b<0                a comes before b
+  a-b>0(+)             b comes before a //swapping
+  a-b=0                No Change
+
+string:
+------
+        -it is a collection of characters
+
+toString():It converts array into string ,and each values can be join by ,(comma)
+Join(character):it converts array into string , and each values can be join with special character
+
+padStart(size,character):it helps to add characters at starting of a string based on size
+padEnd(size,character):it helps to add characters at end of a string based on size
+
+trim():--removes whitespaces
+trimStart():---remove whitespaces at start
+trimEnd():--removes whitespaces at end
+
+repeat(count):
+-------------
+    -it repeat the string based on a count times
+replace(searchvalue,replacedvalue)-helps to replace a character
+substring(startIndex,endIndex)- same like slice,used to extract the string
+split(character,limit)-based on character,it will divide string into multiple strings and make as an array
+                    -based on limit it returns those many elements and it is optional
+________________________________________________________________________________________________________________________
+------------------------------------------------------------------------------------------------------------------------
+BOM(Browser Object model):
+--------------------------
+    -It is a collection of objects that represent browser environment
+    -It provides access to the browser objects like window and document
+
+Use cases:
+----------
+    -Redirect to another page
+    -Open a new window/tab
+    -Access browser info,history
+    -Handling timeouts and intervals
+    -access browser cookies(session)
+    -browser alert messages
+
+DOM(Document Object Model):
+---------------------------
+    -It represents the html document structureand its content as true of objects
+    -It helps to access html elementsand its properties
+    -It helps to manipulate the html elements and Class
+Use cases:
+---------
+    -Create dynamic webpages
+    -Manipulating html document
+    -Create interactive web pages
+    -Handling events
+
+                                DOM                                            BOM
+-----------------------------------------------------------------------------------------------------------------------
+purpose             interact with a html document                    interact with a browser
+
+main object                   document                                         window
+------------------------------------------------------------------------------------------------------------------------- 
+DOM Manipulation:
+------------------
+    1.Acess elements
+    2.Create elements
+    3.elements Manipulation
+    4.Attribute Manipulation(adding,removing,replacing)
+    5.Css Manipulation
+    6.Event Manipulation/Handling
+
+1.Element Accessing:
+-------------------
+    1.getElementById(idname)-returns single element based on id name(unique)
+    2.getElementByClassName(clasname)-returns multiple elements(htmltml collection)
+    3.getElementByTagName(tagName)-returns multiple elements(htmltml collection)
+    4.querySelector(queryName)-returns first matching result(based on seletor matching)
+    5.querySelectorAll(queryName)-returns all matching result(Nodelist)
+
+2.Create Elements:
+-----------------
+       - using createElemet function of document
+
+3.Element Manipulation:
+----------------------
+     1.append()/appendChild() -- adds elements at the end in a parent element
+     2.prepend()----adds elements at the top in a parent element
+     3.insertBefore(newElement, existingElement)---adds element in a respective position 
+                                                 based on element we are providing in 2nd Arguments
+    4.replaceChild(newText,oldText)--replace old element with new element in parent container
+    5.cloneNode()---it helps to create an exact copy(cloned)
+
+4.Attribute Manipulation:
+------------------------
+        - modifying Attribute by dom Functions
+    1.setAttribute() -- adding Attribute
+    2.removeAttribute()--removing Attribute
+    3.getAttribute()--accessing Attribute and returns value
+    4.hasAttribute()--chceking Attribute is exist or not and returns boolean data
+
+5.CSS Manipulation:
+------------------
+      1.style- adding Css (inline css)
+      2.ClassList.add()--adding class
+      3.ClassList.remove()--removing class
+      4.ClassList.toggle()------toggling class --(on/off)
+      5.ClassList.contains()---checking class present or not
+      5.getComputedStyle()---accessing style
+
+6.Event Manipulation:
+---------------------
+        function:It is a block of code used to perform a specific task
+                -it can be resuable
+        
+        Event: It is an action that occurs in a browser side
+             - when event trigger , it will call functions to perform a task
+             -used to handle user interactions
+        
+        examples:
+        ---------
+                1.mouse events--onclick,onDoubleclick,onmouseover etc.,
+                2.keyboard events--onkeyup,onkeydown,onkeypress etc.,
+                3.Form events---onsubmit,onchange,onfocus,onblur etc.,
+                4.window events--onload,onresize,etc
+    
+1.Adding event:
+---------------
+    1.inline :
+                   <h1  onEventName="functionName()" ></h1>
+            2.event property:         
+                 let span=document.getElementById('span');
+                    span.onEventName=functionName();                
+            3.addEventListener():
+                  let div=document.getElementById('div');
+                      div.addEventListener('eventName',functionName());
+
+2.Removing Event:
+----------------
+                -first we need to add event , then only we can delete an event
+
+                 let div=document.getElementById('div');
+                      div.addEventListener('eventName',functionName);
+                      div.removeEventListener('eventName',functionName);
+3.Dispatch Event:
+---------------
+                -It is used to fire an event programatically
+                -Dispatching an event means we manually trigger an event using JS instead of 
+                 waiting for user action
+
+                 disptachEvent(eventObject);
+               
+Event Propagation:
+------------------
+               -The event will propgagate from child to parent and vice versa
+            1.Event bubbling:
+                        - It will propagate from child to parent
+                        - this is default Propagation
+                        ex: button--->child---->parent
+            2.Event Captuirng/tricking
+                         - It will propagate from parent to child
+                         - In addEventListener() , we need to true in 3rd argument
+                         ex: parent--->child---->button
+    Note: event.stopPropagation() is used to stop propagation
+
+=========================================================================================================
+
+JQUERY 
+++++++   
+      - It is a fast , lightweight Js Library 
+      - We can simplify Html , CSS and Js tasks
+
+1.Accessing/Select Elemets:
+---------------------------
+$('tagName') //all tags
+$('#idName') //id
+$('.className') // class
+
+2.Adding Events:
+------------------
+$('tagName').eventName(function);
+
+3.Css Manipulation:
+-------------------
+$('tagName').css("propertyName","value");
+
+4.Adding Content:
+---------------
+$('tagName').text("text....");
+$('tagName').html("<h1>text....</h1>")
+
+=========================================================================================
+Closuers:
+--------
+         -It is a special function, which can access to the parent scope data/variable (lexical scope)
+         -It can access the varaibales/function  of parent scope
+         -It is use private variables or functions (Data Hiding --Encapsulation)
+
+         example:  
+         function parent(){
+            let property="home";
+           return  function child(){
+                console.log(property);
+             }
+         }
+         let children()= parent();
+         children();
+====================================================================================================
+ this:
+ ---- 
+       - It is a keyword , it refers an object
+       - It helps to call property / functions
+
+call():
+------
+       - It is a function , used to call a function 
+       - when you need to invoke a function immediately with a object value(this)
+         -- pass the values into a function as arguments
+
+apply():
+-------
+       - It is a function , used to call a function 
+       - when you need to invoke a function immediately with a object value(this)
+         -- pass the values into a function as array
+
+bind():
+------
+       - It is a function, used to bind(fix) the value of this keyword for a function
+        ---- pass the values into a function as arguments
+        ---- It retuns  a function 
+==================================================================================================

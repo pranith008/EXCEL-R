@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="form">
+        <input type="text" name="'username" id="username" placeholder="enter username"><br></br>
+        <input type="password" name="password" id="password" placeholder="enter password"><br><br>
+        <button type="submit">LOGIN</button>
+
+    </form>
+
+    <script>
+        let username='admin';
+        let password='admin@123';
+
+        let form=document.getElementById('form');
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault();//stops reload the page
+            let name=document.getElementById('username').value;
+            let pwd=document.getElementById('password').value;
+            if(name===username&&pwd===password){
+                window.location.href='https://www.w3schools.com/'
+                
+            }else{
+                let h2=document.createElement('h2');
+                h2.innerHTML='Invalid Credentials';
+                h2.style.color='red';
+                form.prepend(h2);
+            }
+        })
+    </script>
+</body>
+</html>

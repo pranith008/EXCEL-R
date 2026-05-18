@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bulb Design</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #e9e9e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            text-align: center;
+        }
+        #bulb{
+            width: 300px;
+            height: 300px;
+            border: 3px solid gray;
+            border-radius: 50%;
+            background-color: white;
+            margin: auto;
+            transition: 0.4s;
+        }
+        .buttons{
+            margin-top: 40px;
+        }
+        button{
+            width: 80px;
+            height: 140px;
+            margin: 10px;
+            font-size: 24px;
+            border: 2px solid gray;
+            background-color: #f4ead7;
+            cursor: pointer;
+        }
+        button:hover{
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="bulb"></div>
+        <div class="buttons">
+            <button onclick="bulbOn()">ON</button>
+            <button onclick="bulbOff()">OFF</button>
+        </div>
+    </div>
+    <script>
+        function bulbOn(){
+            let color = prompt("Enter bulb color");
+            document.getElementById("bulb").style.backgroundColor = color;
+        }
+        function bulbOff(){
+            document.getElementById("bulb").style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Manipulation</title>
+</head>
+<body>
+    <p id="p1" class="p" style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolor.</p>
+    <img src="" alt="">
+    <script>
+        let p=document.getElementById('p1');
+        console.log(p);
+
+        // accessing attribute
+        console.log(p.getAttribute('id'));
+        console.log(p.getAttribute('class'));
+        console.log(p.getAttribute('style'));
+        
+        // add attribute
+        let img=document.getElementsByTagName('img');
+        img[0].setAttribute('src','./marvels-spider-man-6000x2880-9850.jpg');
+        img[0].setAttribute('height','400px');
+        img[0].setAttribute('width','400px')
+
+        //checking
+        console.log(img[0].hasAttribute('id'));
+        // removing attribute
+        img[0].removeAttribute('width');
+        console.log('after removing',img[0].hasAttribute('img'));
+        
+        
+        
+        
+    </script>
+</body>
+</html>

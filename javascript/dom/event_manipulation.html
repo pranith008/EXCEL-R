@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event manipulation</title>
+</head>
+<body>
+    <!-- inline event -->
+    <div onclick="inlineevent()">Click</div>
+    <i id="i">Mouse Over</i><br>
+    <input type="text" id="inputtext">
+    <p id="p" style="border: 1px solid black; height: 300px; width: 300px;"></p>
+    <button id="btn">Click ME</button>
+    <script>
+        function inlineevent(){
+            console.log('clicked by using inline');
+            
+        }
+        // event through property
+        let i=document.getElementById('i');
+        i.onmouseover=function(){
+            i.style.color='blue';
+        }
+        // through addEventListener function
+        let inputtext=document.getElementById('inputtext');
+        inputtext.addEventListener('keyup',()=>{
+            console.log('typing',inputtext.value);
+            
+        })
+
+        let p=document.getElementById('p');
+
+      function randomColor(){
+        let color='#'+Math.floor(Math.random()*13456785).toString(16);
+        p.style.background=color;
+        
+      }
+      p.addEventListener("click",randomColor);
+       
+      setTimeout(() => {
+        p.removeEventListener("click",randomColor);
+        console.log('removed event');
+        
+      }, 2000);
+
+      let btn=document.getElementById('btn');
+
+         btn.addEventListener("MyOwnEvent",()=>{
+            alert('My Custom Events ');
+        })
+        setTimeout(() => {
+                    btn.dispatchEvent(new CustomEvent("MyOwnEvent"));
+                    console.log('custom generated');
+        }, 5000);
+
+        // btn.addEventListener("click",()=>{
+        //     alert('clicked');
+        // })
+
+        // btn.dispatchEvent(new Event("click"));
+    </script>
+</body>
+</html>

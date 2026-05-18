@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css manipulation</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .box1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">Adding</div>
+    <div id="div2" class="box">Removing</div>
+    <div id="div3" onclick="togglebox()">Toggle</div> 
+    <div id="div4" class="box">Box</div>
+    <script>
+        let div4=document.getElementById('div4');
+        // to access style for an element
+        let style=getComputedStyle(div4);
+        console.log(style);
+        console.log(style.border);
+        console.log(style.height);
+        console.log(style.color);
+        console.log(div4.classList.contains('box'));
+        console.log(div4.classList.contains('box1'));
+
+        
+        
+        
+        
+        
+        let div3=document.getElementById('div3');
+        function togglebox(){
+            div3.classList.toggle('box');
+        }
+        
+        let div1=document.querySelector('#div1');
+        console.log(div1);
+        div1.classList.add('box');
+
+        let div2=document.querySelector('#div2');
+        div2.classList.remove('box');
+    </script>
+</body>
+</html>
