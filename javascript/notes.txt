@@ -80,7 +80,7 @@ re-declaring the variable :
         let a;
         let a;
 
-re-assigningb the variable :
+re-assigning the variable :
         let a;
         a=10;
         a='xyz';
@@ -210,7 +210,7 @@ promises:
 
     states:
     1.Pending -- starting /initial state 
-    2.fulfilles -- if operation is success
+    2.fulfilled -- if operation is success
     3.Rejected -- if operation is failed
 
 promise can be handle in two ways
