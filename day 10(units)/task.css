@@ -69,8 +69,8 @@ a:hover{
     }
     .grid-container{
      grid-template-areas: "section1   section1"
-                          "main       main"
                           "section2   section2"
+                          "main       main"
                           "footer     footer";   
     }
 }

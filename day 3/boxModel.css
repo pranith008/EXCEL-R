@@ -3,7 +3,6 @@ div{
    border-style: solid;
    border-color: red;
    border-width: 4px;
-
    margin: 40px;
 }
 /* inline element */
@@ -11,7 +10,7 @@ span{
    /* border-style: solid;
    border-color: violet;
    border-width: 5px; */
-     margin: 40px;
+   margin: 40px;
 
 
    /* shorthand structure */
